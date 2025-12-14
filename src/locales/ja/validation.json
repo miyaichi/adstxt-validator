@@ -1,0 +1,89 @@
+{
+  "validation_errors": {
+    "missingFields": {
+      "message": "必須フィールドが不足しています",
+      "description": "ads.txtエントリには、ドメイン、アカウントID、関係性の3つの必須フィールドが必要です",
+      "helpUrl": "/help/#missing-fields"
+    },
+    "invalidFormat": {
+      "message": "無効なフォーマットです",
+      "description": "ads.txtエントリの形式が正しくありません。カンマで区切られた形式で入力してください",
+      "helpUrl": "/help/#invalid-format"
+    },
+    "invalidRelationship": {
+      "message": "無効な関係性です",
+      "description": "関係性は「DIRECT」または「RESELLER」である必要があります",
+      "helpUrl": "/help/#invalid-relationship"
+    },
+    "invalidDomain": {
+      "message": "無効なドメインです",
+      "description": "指定されたドメイン「{{domain}}」は有効なドメイン形式ではありません",
+      "helpUrl": "/help/#invalid-domain"
+    },
+    "emptyAccountId": {
+      "message": "アカウントIDが空です",
+      "description": "アカウントIDは必須フィールドです",
+      "helpUrl": "/help/#empty-account-id"
+    },
+    "emptyFile": {
+      "message": "ファイルが空です",
+      "description": "ads.txtファイルにコンテンツがありません",
+      "helpUrl": "/help/#empty-file"
+    },
+    "invalidCharacters": {
+      "message": "無効な文字が含まれています",
+      "description": "ads.txtファイルに印刷できない文字や制御文字が含まれています",
+      "helpUrl": "/help/#invalid-characters"
+    },
+    "noSellersJson": {
+      "message": "{{domain}}のsellers.jsonファイルが見つかりません",
+      "description": "指定された広告システムにsellers.jsonファイルが存在しません",
+      "helpUrl": "/help/#no-sellers-json"
+    },
+    "directAccountIdNotInSellersJson": {
+      "message": "DIRECTエントリのアカウントID「{{accountId}}」がsellers.jsonに見つかりません",
+      "description": "DIRECT関係のエントリは、対応するsellers.jsonファイルにアカウントIDが登録されている必要があります",
+      "helpUrl": "/help/#direct-account-id-not-in-sellers-json"
+    },
+    "resellerAccountIdNotInSellersJson": {
+      "message": "RESELLERエントリのアカウントID「{{accountId}}」がsellers.jsonに見つかりません",
+      "description": "RESELLER関係のエントリは、対応するsellers.jsonファイルにアカウントIDが登録されている必要があります",
+      "helpUrl": "/help/#reseller-account-id-not-in-sellers-json"
+    },
+    "domainMismatch": {
+      "message": "ドメインの不一致: {{sellerDomain}}",
+      "description": "sellers.jsonのドメインとads.txtのOWNERDOMAIN/MANAGERDOMAINが一致しません",
+      "helpUrl": "/help/#domain-mismatch"
+    },
+    "directNotPublisher": {
+      "message": "DIRECTエントリのseller_typeが「PUBLISHER」ではありません",
+      "description": "DIRECT関係のエントリは、sellers.jsonでseller_typeが「PUBLISHER」または「BOTH」である必要があります",
+      "helpUrl": "/help/#direct-not-publisher"
+    },
+    "sellerIdNotUnique": {
+      "message": "アカウントID「{{accountId}}」が重複しています",
+      "description": "同じアカウントIDが複数のエントリで使用されています",
+      "helpUrl": "/help/#seller-id-not-unique"
+    },
+    "resellerNotIntermediary": {
+      "message": "RESELLERエントリのseller_typeが「INTERMEDIARY」ではありません",
+      "description": "RESELLER関係のエントリは、sellers.jsonでseller_typeが「INTERMEDIARY」または「BOTH」である必要があります",
+      "helpUrl": "/help/#reseller-not-intermediary"
+    },
+    "implimentedEntry": {
+      "message": "重複したエントリです",
+      "description": "同じ内容のads.txtエントリが複数存在します",
+      "helpUrl": "/help/#implimented-entry"
+    },
+    "noValidRecords": {
+      "message": "有効なレコードがありません",
+      "description": "アップロードされたファイルまたは提供されたデータに有効なads.txtレコードが含まれていません",
+      "helpUrl": "/help/#no-valid-records"
+    },
+    "parsingError": {
+      "message": "解析エラー: {{message}}",
+      "description": "ファイルまたはデータの解析中にエラーが発生しました",
+      "helpUrl": "/help/#parsing-error"
+    }
+  }
+}

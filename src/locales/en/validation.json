@@ -1,0 +1,89 @@
+{
+  "validation_errors": {
+    "missingFields": {
+      "message": "Missing required fields",
+      "description": "Ads.txt entries require three mandatory fields: domain, account ID, and relationship",
+      "helpUrl": "/help/#missing-fields"
+    },
+    "invalidFormat": {
+      "message": "Invalid format",
+      "description": "The ads.txt entry format is incorrect. Please use comma-separated format",
+      "helpUrl": "/help/#invalid-format"
+    },
+    "invalidRelationship": {
+      "message": "Invalid relationship",
+      "description": "Relationship must be either 'DIRECT' or 'RESELLER'",
+      "helpUrl": "/help/#invalid-relationship"
+    },
+    "invalidDomain": {
+      "message": "Invalid domain",
+      "description": "The specified domain '{{domain}}' is not a valid domain format",
+      "helpUrl": "/help/#invalid-domain"
+    },
+    "emptyAccountId": {
+      "message": "Account ID is empty",
+      "description": "Account ID is a required field",
+      "helpUrl": "/help/#empty-account-id"
+    },
+    "emptyFile": {
+      "message": "File is empty",
+      "description": "The ads.txt file contains no content",
+      "helpUrl": "/help/#empty-file"
+    },
+    "invalidCharacters": {
+      "message": "Contains invalid characters",
+      "description": "The ads.txt file contains non-printable or control characters",
+      "helpUrl": "/help/#invalid-characters"
+    },
+    "noSellersJson": {
+      "message": "sellers.json file not found for {{domain}}",
+      "description": "The specified advertising system does not have a sellers.json file",
+      "helpUrl": "/help/#no-sellers-json"
+    },
+    "directAccountIdNotInSellersJson": {
+      "message": "DIRECT entry account ID '{{accountId}}' not found in sellers.json",
+      "description": "DIRECT relationship entries must have their account ID registered in the corresponding sellers.json file",
+      "helpUrl": "/help/#direct-account-id-not-in-sellers-json"
+    },
+    "resellerAccountIdNotInSellersJson": {
+      "message": "RESELLER entry account ID '{{accountId}}' not found in sellers.json",
+      "description": "RESELLER relationship entries must have their account ID registered in the corresponding sellers.json file",
+      "helpUrl": "/help/#reseller-account-id-not-in-sellers-json"
+    },
+    "domainMismatch": {
+      "message": "Domain mismatch: {{sellerDomain}}",
+      "description": "The domain in sellers.json does not match the OWNERDOMAIN/MANAGERDOMAIN in ads.txt",
+      "helpUrl": "/help/#domain-mismatch"
+    },
+    "directNotPublisher": {
+      "message": "DIRECT entry seller_type is not 'PUBLISHER'",
+      "description": "DIRECT relationship entries should have seller_type as 'PUBLISHER' or 'BOTH' in sellers.json",
+      "helpUrl": "/help/#direct-not-publisher"
+    },
+    "sellerIdNotUnique": {
+      "message": "Account ID '{{accountId}}' is duplicated",
+      "description": "The same account ID is used in multiple entries",
+      "helpUrl": "/help/#seller-id-not-unique"
+    },
+    "resellerNotIntermediary": {
+      "message": "RESELLER entry seller_type is not 'INTERMEDIARY'",
+      "description": "RESELLER relationship entries should have seller_type as 'INTERMEDIARY' or 'BOTH' in sellers.json",
+      "helpUrl": "/help/#reseller-not-intermediary"
+    },
+    "implimentedEntry": {
+      "message": "Duplicate entry",
+      "description": "Multiple ads.txt entries with the same content exist",
+      "helpUrl": "/help/#implimented-entry"
+    },
+    "noValidRecords": {
+      "message": "No valid records found",
+      "description": "The uploaded file or provided data does not contain any valid ads.txt records",
+      "helpUrl": "/help/#no-valid-records"
+    },
+    "parsingError": {
+      "message": "Parsing error: {{message}}",
+      "description": "An error occurred while parsing the file or data",
+      "helpUrl": "/help/#parsing-error"
+    }
+  }
+}

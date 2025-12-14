@@ -1,0 +1,55 @@
+{
+  "name": "adstxt-validator",
+  "version": "1.2.3",
+  "description": "A TypeScript library for validating ads.txt files and sellers.json files",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/**/*",
+    "src/locales/**/*.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"Tests will be implemented in future versions\" && exit 0"
+  },
+  "keywords": [
+    "ads.txt",
+    "sellers.json",
+    "advertising",
+    "validation",
+    "typescript"
+  ],
+  "author": "Yoshihiko Miyaichi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miyaichi/adstxt-validator.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "psl": "^1.9.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@types/node": "^20.0.0",
+    "@types/psl": "^1.1.3",
+    "@typescript-eslint/eslint-plugin": "^8.49.0",
+    "@typescript-eslint/parser": "^8.49.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.7.4",
+    "typescript": "^5.0.4",
+    "typescript-eslint": "^8.49.0"
+  }
+}
