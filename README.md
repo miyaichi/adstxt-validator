@@ -1,8 +1,6 @@
-# @miyaichi/ads-txt-validator
+# adstxt-validator
 
 A comprehensive TypeScript library for parsing, validating, and cross-checking ads.txt files against sellers.json data. This package provides robust validation capabilities with detailed error reporting and optimization features.
-
-> **Note**: This package is available on GitHub Packages. For internal use within the adstxt-manager monorepo, the package is also available as `@adstxt-manager/ads-txt-validator`.
 
 ## Features
 
@@ -17,16 +15,8 @@ A comprehensive TypeScript library for parsing, validating, and cross-checking a
 
 ## Installation
 
-### From GitHub Packages
-
 ```bash
-npm install @miyaichi/ads-txt-validator
-```
-
-### From internal monorepo
-
-```bash
-npm install @adstxt-manager/ads-txt-validator
+npm install adstxt-validator
 ```
 
 ## Quick Start
@@ -34,7 +24,7 @@ npm install @adstxt-manager/ads-txt-validator
 ### Basic Usage
 
 ```typescript
-import { parseAdsTxtContent, crossCheckAdsTxtRecords } from '@miyaichi/ads-txt-validator';
+import { parseAdsTxtContent, crossCheckAdsTxtRecords } from 'adstxt-validator';
 
 // Parse ads.txt content
 const adsTxtContent = `
@@ -68,7 +58,7 @@ import {
   parseAdsTxtContent,
   crossCheckAdsTxtRecords,
   SellersJsonProvider,
-} from '@miyaichi/ads-txt-validator';
+} from 'adstxt-validator';
 
 // Create optimized provider
 const sellersJsonProvider: SellersJsonProvider = {
@@ -517,7 +507,7 @@ The package uses comprehensive error keys for different validation scenarios:
 ### Basic Parsing
 
 ```typescript
-import { parseAdsTxtContent } from '@miyaichi/ads-txt-validator';
+import { parseAdsTxtContent } from 'adstxt-validator';
 
 const adsTxtContent = `
 # Ads.txt file
@@ -538,7 +528,7 @@ console.log(`Found ${validRecords.length} valid records`);
 ### Cross-checking with Sellers.json
 
 ```typescript
-import { crossCheckAdsTxtRecords, parseAdsTxtContent } from '@miyaichi/ads-txt-validator';
+import { crossCheckAdsTxtRecords, parseAdsTxtContent } from 'adstxt-validator';
 
 const getSellersJson = async (domain: string) => {
   try {
@@ -574,7 +564,7 @@ validatedEntries.forEach((entry) => {
 When using this package as an external library, you can configure the base URL for help links:
 
 ```typescript
-import { configureMessages, createValidationMessage } from '@miyaichi/ads-txt-validator';
+import { configureMessages, createValidationMessage } from 'adstxt-validator';
 
 // Configure the message system with your application's base URL
 configureMessages({
@@ -743,7 +733,7 @@ For static HTML applications, you can implement fragment-based navigation:
 ### Content Optimization
 
 ```typescript
-import { optimizeAdsTxt } from '@miyaichi/ads-txt-validator';
+import { optimizeAdsTxt } from 'adstxt-validator';
 
 const messyAdsTxtContent = `
 # Ads.txt file
@@ -762,7 +752,7 @@ console.log(optimizedContent);
 ### Error Handling
 
 ```typescript
-import { parseAdsTxtContent, isAdsTxtRecord } from '@miyaichi/ads-txt-validator';
+import { parseAdsTxtContent, isAdsTxtRecord } from 'adstxt-validator';
 
 const parsedEntries = parseAdsTxtContent(adsTxtContent);
 
