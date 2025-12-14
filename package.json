@@ -1,6 +1,6 @@
 {
   "name": "adstxt-validator",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "A TypeScript library for validating ads.txt files and sellers.json files",
   "type": "module",
   "main": "dist/index.js",
